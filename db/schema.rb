@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170214154933) do
+ActiveRecord::Schema.define(version: 20170216161943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "food_items", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.decimal  "price"
+    t.integer  "section_id"
+    t.string   "image_url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["section_id"], name: "index_food_items_on_section_id", using: :btree
+  end
+
+  create_table "oders", force: :cascade do |t|
+    t.integer  "food_item_id"
+    t.integer  "quantity"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["food_item_id"], name: "index_oders_on_food_item_id", using: :btree
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer  "food_item_id"
+    t.integer  "quantity"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["food_item_id"], name: "index_orders_on_food_item_id", using: :btree
+  end
 
   create_table "sections", force: :cascade do |t|
     t.string   "name"
@@ -21,4 +48,7 @@ ActiveRecord::Schema.define(version: 20170214154933) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "food_items", "sections"
+  add_foreign_key "oders", "food_items"
+  add_foreign_key "orders", "food_items"
 end
