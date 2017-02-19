@@ -26,14 +26,6 @@ ActiveRecord::Schema.define(version: 20170216161943) do
     t.index ["section_id"], name: "index_food_items_on_section_id", using: :btree
   end
 
-  create_table "oders", force: :cascade do |t|
-    t.integer  "food_item_id"
-    t.integer  "quantity"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["food_item_id"], name: "index_oders_on_food_item_id", using: :btree
-  end
-
   create_table "orders", force: :cascade do |t|
     t.integer  "food_item_id"
     t.integer  "quantity"
