@@ -1,0 +1,10 @@
+<h1>Checkout</h1>
+
+<div class="form form-group">
+  <%= form_for 'checkout' do  %>
+    <%= text_field_tag :customer_name  %>
+    <%= text_field_tag :phone_number  %>
+    <%= text_field_tag :address  %>
+    <%= submit_tag "Submit" %>
+  <% end %>
+</div>
