@@ -14,3 +14,21 @@ else
   puts "You already have some section data"
 end
 
+food_list = [
+	[ "Pho Bo", "Vietnamese famous noodle", "Breakfast", 35000],
+	[ "Bun Bo", "Vietnamese famous noodle", "Breakfast", 35000],
+	[ "Hu Tieu", "Vietnamese famous noodle", "Breakfast", 30000],
+	[ "Op la", "Made from eggs", "Breakfast", 15000],
+	[ "Banh Canh", "Vietnamese famous noodle", "Breakfast", 25000],
+
+	[ "Com Ga", "Lunch meal", "Lunch", 35000],
+	[ "Com Suon", "Lunch meal", "Lunch", 15000],
+	[ "Com Nieu", "Lunch meal", "Lunch", 25000],
+	[ "My Quang", "Lunch meal", "Lunch", 65000],
+	[ "Chao Long", "Lunch meal", "Lunch", 10000]
+]
+
+food_list.each do |name,desc,section,price|
+  section = Section.where(name: section).take
+  FoodItem.create(name: name, description: desc, price: price, section: section)
+end
