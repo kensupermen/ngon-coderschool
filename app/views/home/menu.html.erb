@@ -7,7 +7,11 @@
   <% end %>
 
 </div>
-
+<%= form_tag 'search', method: 'get' do %>
+  <%= hidden_field_tag :section_id, params[:section_id] %>
+  <%= text_field_tag :name %>
+  <%= submit_tag "Search", class: "btn btn-secondary" %>
+<% end %>
 <div class="card card-block">
   <div class="form-inline">
     <%= form_tag nil, method: 'get' do %>

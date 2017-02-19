@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   end
   root 'home#index'
 
+  get 'search' => 'home#menu'
+
   get 'menu' => 'home#menu'
   get 'contact_us' => 'home#contact_us'
 
