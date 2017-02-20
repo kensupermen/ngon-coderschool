@@ -64,6 +64,7 @@ Here's a walkthrough of implemented user stories:
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
+Create data in heroku: `heroku run db:seed`
 
 Describe any challenges encountered while building the app.
 
