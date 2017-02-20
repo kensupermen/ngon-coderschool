@@ -1,10 +1,14 @@
 <h1>Checkout</h1>
 
 <div class="form form-group">
-  <%= form_for 'checkout' do  %>
-    <%= text_field_tag :customer_name  %>
-    <%= text_field_tag :phone_number  %>
-    <%= text_field_tag :address  %>
+  <%= form_for('orders',method: :post) do  %>
+  <%= hidden_field_tag :food_item_id, @food_item.id %>
+    Food name: <%= @food_item.name %><br>
+    Price: <%= @food_item.price %><br>
+
+    Customer name: <%= text_field_tag :customer_name  %><br>
+    Phone number: <%= text_field_tag :phone_number  %><br>
+    Address: <%= text_field_tag :address  %><br>
     <%= submit_tag "Submit" %>
   <% end %>
 </div>

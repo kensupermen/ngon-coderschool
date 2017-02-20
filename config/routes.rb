@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
   resources :order_details
-
   resources :food_items do
   end
   root 'home#index'
 
-  get 'orders' => 'orders#create'
+  post 'orders' => 'orders#create'
+  get 'orders/:food_item_id' => 'orders#new'
+  get 'orders' => "orders#new"
+
   get 'order_details/add/:id' => "order_details#add"
   post 'checkout' => "orders#checkout"
 
