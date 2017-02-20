@@ -1,7 +1,7 @@
 <h1>Checkout</h1>
 
 <div class="form form-group">
-  <%= form_for('orders',method: :post) do  %>
+  <%= form_for('/checkout',method: :post) do  %>
   <%= hidden_field_tag :food_item_id, @food_item.id %>
     Food name: <%= @food_item.name %><br>
     Price: <%= @food_item.price %><br>

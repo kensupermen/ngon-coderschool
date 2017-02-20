@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   root 'home#index'
 
   post 'orders' => 'orders#create'
+
   get 'orders/:food_item_id' => 'orders#new'
   get 'orders' => "orders#new"
 
   get 'order_details/add/:id' => "order_details#add"
-  post 'checkout' => "orders#checkout"
 
   get 'search' => 'home#menu'
   get 'detail' => 'order_details#show'
