@@ -1,30 +1,23 @@
 <p id="notice"><%= notice %></p>
-
-
-<p>
-  <strong>Name:</strong>
-  <%= @food_item.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @food_item.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @food_item.price %>
-</p>
-
-<p>
-  <strong>Section:</strong>
-  <%= @food_item.section %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
+<div class="row">
+<div class="col-sm-4">
   <%= image_tag @food_item.image_url_or_default %>
-</p>
+</div>
+<div class="col-sm-8">
+
+  <strong>Name:</strong>
+  <%= @food_item.name %><br>
+
+  <strong>Description:</strong>
+  <%= @food_item.description %><br>
+
+  <strong>Price:</strong>
+  <%= @food_item.price %><br>
+
+  <strong>Section:</strong>
+  <%= @food_item.section %><br>
 
 <%= link_to 'Order', orders_path(food_item_id: @food_item.id), class: 'btn btn-primary' %> 
 <%= link_to 'Back', food_items_path, class: 'btn btn-secondary' %>
+</div>
+</div>
