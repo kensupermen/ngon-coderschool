@@ -25,7 +25,20 @@ food_list = [
 	[ "Com Suon", "Lunch meal", "Lunch", 15000],
 	[ "Com Nieu", "Lunch meal", "Lunch", 25000],
 	[ "My Quang", "Lunch meal", "Lunch", 65000],
-	[ "Chao Long", "Lunch meal", "Lunch", 10000]
+	[ "Chao Long", "Lunch meal", "Lunch", 10000],
+
+
+[ "Com Ga", "Lunch meal", "Dinner", 35000],
+	[ "Com Suon", "Lunch meal", "Dinner", 15000],
+	[ "Com Nieu", "Lunch meal", "Dinner", 25000],
+	[ "My Quang", "Lunch meal", "Dinner", 65000],
+	[ "Chao Long", "Lunch meal", "Dinner", 10000],
+
+[ "Com Ga", "Lunch meal", "Dinks", 35000],
+	[ "Com Suon", "Lunch meal", "Dinks", 15000],
+	[ "Com Nieu", "Lunch meal", "Dinks", 25000],
+	[ "My Quang", "Lunch meal", "Dinks", 65000],
+	[ "Chao Long", "Lunch meal", "Dinks", 10000],
 ]
 
 food_list.each do |name,desc,section,price|

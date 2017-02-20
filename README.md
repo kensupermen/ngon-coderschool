@@ -6,7 +6,7 @@ Submitted by: **Vo Tan Tho**
 
 Time spent: **20** hours spent in total
 
-URL: **heroku-app-url**
+URL: **https://gentle-brook-35599.herokuapp.com/**
 
 ## User Stories
 
