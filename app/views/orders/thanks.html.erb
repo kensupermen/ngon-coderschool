@@ -4,4 +4,4 @@ Phone number: <%= @order.phone %><br>
 Address: <%= @order.address %> <br>
 Food name: <%= @food_item.name %><br>
 Total price: <%= @food_item.price %><br>
-Create at: <%= @order.created_at %>
+Create at: <%= @order.created_at.strftime("%B %e, %Y at %I:%M %p") %>
